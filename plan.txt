@@ -1,0 +1,3 @@
+Hoàn chỉnh component thời tiết
+Thêm input
+Thêm Home

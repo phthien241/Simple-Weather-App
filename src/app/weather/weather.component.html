@@ -1,0 +1,32 @@
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center" [ngStyle]="{'background-image': 'url(' + background + ')'}">
+    <div class="weather-info">
+        <div class="city">
+            <strong>{{this.city}}</strong>
+        </div>
+        <ul class="main-info">
+            <li><a>{{(weatherData.main.temp-275)|number : '1.0-0'}}°C</a></li>
+            <li><a>Feel like: {{(weatherData.main.feels_like-275)|number: '1.0-0'}}°C</a></li>
+            <li><a>{{(weatherData.main.temp_max-275)|number: '1.0-0'}}°C / {{(weatherData.main.temp_min-275)|number: '1.0-0'}}°C</a></li>
+        </ul>
+        <div class="top-data">
+            <ul class="more pressure">
+                <li><a>Pressure</a></li>
+                <li><a>{{weatherData.main.pressure}}</a></li>
+            </ul>
+            <ul class="more humidity">
+                <li><a>Humidity</a></li>
+                <li><a>{{weatherData.main.pressure}}</a></li>
+            </ul>
+        </div>
+        <div class="low-data">
+            <ul class="more visibility">
+                <li><a>Visiblity</a></li>
+                <li><a>{{weatherData.visibility/1000}} km</a></li>
+            </ul>
+            <ul class="more wind">
+                <li><a>Wind</a></li>
+                <li><a>{{weatherData.wind.speed}} m/s</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

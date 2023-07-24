@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="container-fluid">
+        <!-- <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+          </div> -->
+        <div class="container-news" *ngFor="let i of [index, index-1]">
+            <div class="news" *ngIf="i >= 0">
+                <img *ngIf="i >=0" class="images" src={{img[i]}} alt="">
+                <p class="title"><a *ngIf="i >=0" href={{link[i]}}>{{title[i]}}</a></p> 
+            </div>
+            <hr *ngIf="i>=0">
+        </div>
+        <div class="container-button">
+            <button type="button" class="btn-circle" routerLink="../{{currentPage-1}}" [disabled]="currentPage == 1" (click)="onPrevious()"><</button>
+            <div *ngIf="lastPage - currentPage + 1 <= 4">
+                <button *ngFor="let page of [lastPage-3,lastPage-2,lastPage-1,lastPage]" type="button" class="btn-circle" routerLink="../{{page}}" (click)="onMove(page)">{{page}}</button>
+            </div>
+            <div *ngIf="arrayPages[arrayPages.length-1] - currentPage + 1 > 4">
+                <button *ngFor="let page of [currentPage,currentPage + 1,currentPage+2]" type="button" class="btn-circle" routerLink="../{{page}}" (click)="onMove(page)">{{page}}</button>
+                <button type="button" class="btn-circle">...</button>
+                <button type="button" class="btn-circle" routerLink="../{{arrayPages[arrayPages.length-1]}}" (click)="onMove(arrayPages[arrayPages.length-1])">{{arrayPages[arrayPages.length-1]}}</button>
+            </div>
+        </div>
+    </div>
+</div>

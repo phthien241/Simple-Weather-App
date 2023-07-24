@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Weather App</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form #f="ngForm" (ngSubmit)="OnSubmit(f)" class="d-flex ms-auto" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" ngModel name="city" required>
+          <button class="btn btn-outline-success" type="submit" [disabled]="!f.valid" routerLink="">Search</button>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/news/1">NEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HELP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
