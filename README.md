@@ -29,3 +29,6 @@ Welcome to the repository of our Weather Website! If you're curious about the fo
 ### Run the Application:
 - ng serve
 
+![Night Weather](images/screenshot1.png)
+![Day Weather and Search](images/screenshot3.png)
+![News](images/screenshot2.png)
