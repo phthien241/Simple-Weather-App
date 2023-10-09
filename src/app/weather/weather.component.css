@@ -1,4 +1,6 @@
-
+.container-fluid{
+    background-size: cover;
+}
 
 .weather-info{
     position: absolute;
